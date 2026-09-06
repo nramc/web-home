@@ -347,9 +347,14 @@ export default function Page() {
                         <span className="font-medium text-foreground">Ram</span>{" "}
                         — building with curiosity and care.
                     </p>
-                    <p className="font-mono text-xs text-muted-foreground/70">
-                        codewithram.dev
-                    </p>
+                    <div className="flex flex-col gap-1 sm:items-end">
+                        <p className="font-mono text-xs text-muted-foreground/70">
+                            codewithram.dev
+                        </p>
+                        <p className="text-xs text-muted-foreground/70">
+                            © {new Date().getFullYear()} Ram. All rights reserved.
+                        </p>
+                    </div>
                 </div>
             </footer>
         </main>
