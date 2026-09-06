@@ -44,21 +44,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Available scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create a production build |
-| `npm run start` | Start the production server |
-| `npm run test` | Run the current test command placeholder |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Automatically fix ESLint issues |
-| `npm run format:check` | Format TypeScript files with Prettier |
-| `npm run format` | Format the project with Prettier |
-| `npm run typecheck` | Run the TypeScript compiler without emitting files |
-| `npm run security:check` | Run the high-severity npm audit check |
-| `npm run housekeeping` | Fix lint issues and format the project |
-| `npm run prepare:commit` | Run housekeeping, type checking, and a production build |
-| `npm run verify` | Run formatting, linting, type checking, security, and test checks |
+| Command                  | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| `npm run dev`            | Start the development server                                      |
+| `npm run build`          | Create a production build                                         |
+| `npm run start`          | Start the production server                                       |
+| `npm run test`           | Run the current test command placeholder                          |
+| `npm run lint`           | Run ESLint                                                        |
+| `npm run lint:fix`       | Automatically fix ESLint issues                                   |
+| `npm run format:check`   | Format TypeScript files with Prettier                             |
+| `npm run format`         | Format the project with Prettier                                  |
+| `npm run typecheck`      | Run the TypeScript compiler without emitting files                |
+| `npm run security:check` | Run the high-severity npm audit check                             |
+| `npm run housekeeping`   | Fix lint issues and format the project                            |
+| `npm run prepare:commit` | Run housekeeping, type checking, and a production build           |
+| `npm run verify`         | Run formatting, linting, type checking, security, and test checks |
 
 ## Project structure
 

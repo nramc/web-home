@@ -1,20 +1,20 @@
 {
-  "version": 1,
-  "skills": {
-    "nextjs-app-router-patterns": {
-      "source": "../../../../../tmp/thirukkural-api-skills.NYhoeD/repo/.agents/skills/nextjs-app-router-patterns",
-      "sourceType": "local",
-      "computedHash": "a7a534e906d6f35af301c7124816c33be2400bd6481c9bb9c2121a26cafeb827"
-    },
-    "vercel-functions-runtime": {
-      "source": "../../../../../tmp/thirukkural-api-skills.orExWv/repo/.agents/skills/vercel-functions-runtime",
-      "sourceType": "local",
-      "computedHash": "34191843cc2395f27ed129856af3afb0a60c61ce234858036ad329037460956c"
-    },
-    "vercel-react-best-practices": {
-      "source": "../../../../../tmp/thirukkural-api-skills.orExWv/repo/.agents/skills/vercel-react-best-practices",
-      "sourceType": "local",
-      "computedHash": "605dfeb66c8e7efc4ea676b0a0261a48310c89214d6db05c0a8c1eac37f3dd4c"
+    "version": 1,
+    "skills": {
+        "nextjs-app-router-patterns": {
+            "source": "../../../../../tmp/thirukkural-api-skills.NYhoeD/repo/.agents/skills/nextjs-app-router-patterns",
+            "sourceType": "local",
+            "computedHash": "a7a534e906d6f35af301c7124816c33be2400bd6481c9bb9c2121a26cafeb827"
+        },
+        "vercel-functions-runtime": {
+            "source": "../../../../../tmp/thirukkural-api-skills.orExWv/repo/.agents/skills/vercel-functions-runtime",
+            "sourceType": "local",
+            "computedHash": "34191843cc2395f27ed129856af3afb0a60c61ce234858036ad329037460956c"
+        },
+        "vercel-react-best-practices": {
+            "source": "../../../../../tmp/thirukkural-api-skills.orExWv/repo/.agents/skills/vercel-react-best-practices",
+            "sourceType": "local",
+            "computedHash": "605dfeb66c8e7efc4ea676b0a0261a48310c89214d6db05c0a8c1eac37f3dd4c"
+        }
     }
-  }
 }

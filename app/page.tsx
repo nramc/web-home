@@ -352,7 +352,8 @@ export default function Page() {
                             codewithram.dev
                         </p>
                         <p className="text-xs text-muted-foreground/70">
-                            © {new Date().getFullYear()} Ram. All rights reserved.
+                            © {new Date().getFullYear()} Ram. All rights
+                            reserved.
                         </p>
                     </div>
                 </div>
