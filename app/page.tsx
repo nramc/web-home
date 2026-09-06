@@ -22,7 +22,6 @@ type Project = {
     href: string
     label: string
     icon: LucideIcon
-    featured?: boolean
 }
 
 const projects: Project[] = [
@@ -33,7 +32,6 @@ const projects: Project[] = [
         href: "https://myprofile.codewithram.dev/",
         label: "Personal site",
         icon: Globe2,
-        featured: true,
     },
     {
         title: "Blog",
@@ -42,7 +40,6 @@ const projects: Project[] = [
         href: "https://blog.codewithram.dev/",
         label: "Writing",
         icon: BookOpen,
-        featured: true,
     },
     {
         title: "Thirukkural",
@@ -51,23 +48,14 @@ const projects: Project[] = [
         href: "https://kural.codewithram.dev/",
         label: "Web app + API",
         icon: Layers3,
-        featured: true,
     },
     {
         title: "Journey",
         description:
-            "A journey application with a dedicated frontend and REST API backend.",
+            "A journey application bringing together a dedicated frontend and REST API backend.",
         href: "https://journey.codewithram.dev/home",
-        label: "Product",
+        label: "Product + API",
         icon: Map,
-    },
-    {
-        title: "Journey API",
-        description:
-            "The REST API powering the Journey application, available as a standalone backend service.",
-        href: "https://journey-api.codewithram.dev/",
-        label: "Backend API",
-        icon: Code2,
     },
     {
         title: "geojson4j",
@@ -101,7 +89,7 @@ function ProjectCard({ project }: Readonly<{ project: Project }>) {
         <a
             className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card/70 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
             href={project.href}
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
         >
             <div className="mb-8 flex items-start justify-between gap-4">
@@ -123,7 +111,7 @@ function ProjectCard({ project }: Readonly<{ project: Project }>) {
                 {project.description}
             </p>
             <span className="mt-auto flex items-center gap-2 pt-8 text-sm font-medium text-foreground">
-                Visit project{" "}
+                Visit {project.title}{" "}
                 <ExternalLink aria-hidden="true" className="size-4" />
             </span>
         </a>
@@ -135,7 +123,7 @@ export default function Page() {
         <main className="overflow-hidden">
             <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_top,oklch(0.62_0.2_264/0.16),transparent_58%)] dark:bg-[radial-gradient(circle_at_top,oklch(0.5_0.2_264/0.2),transparent_58%)]" />
 
-            <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+            <header className="sticky top-0 z-20 mx-auto flex max-w-6xl items-center justify-between border-b border-border/40 bg-background/75 px-6 py-4 backdrop-blur-xl lg:px-8">
                 <div className="flex min-w-0 items-center gap-3">
                     <Link
                         className="flex shrink-0 items-center gap-2.5 font-heading text-lg font-bold tracking-tight"
@@ -155,19 +143,22 @@ export default function Page() {
                         Curiosity Driven Engineering
                     </span>
                 </div>
-                <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-                    <a
+                <nav
+                    aria-label="Primary navigation"
+                    className="hidden items-center gap-8 text-sm text-muted-foreground md:flex"
+                >
+                    <Link
                         className="transition-colors hover:text-foreground"
                         href="#work"
                     >
                         Work
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="transition-colors hover:text-foreground"
                         href="#about"
                     >
                         About
-                    </a>
+                    </Link>
                 </nav>
                 <ThemeToggle />
             </header>
@@ -194,10 +185,10 @@ export default function Page() {
                             className="h-11 rounded-full px-6"
                             size="lg"
                         >
-                            <a href="#work">
+                            <Link href="#work">
                                 Explore my work{" "}
                                 <ArrowUpRight aria-hidden="true" />
-                            </a>
+                            </Link>
                         </Button>
                         <Button
                             asChild
@@ -207,7 +198,7 @@ export default function Page() {
                         >
                             <a
                                 href="https://myprofile.codewithram.dev/"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 target="_blank"
                             >
                                 More about me{" "}
