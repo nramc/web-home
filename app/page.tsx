@@ -93,39 +93,40 @@ const capabilities = [
   "Java and open-source libraries",
 ]
 
-function ProjectCard({ project }: { project: Project }) {
-  const Icon = project.icon
+function ProjectCard({ project }: Readonly<{ project: Project }>) {
+    const Icon = project.icon
 
-  return (
-    <a
-      className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card/70 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
-      href={project.href}
-      rel="noreferrer"
-      target="_blank"
-    >
-      <div className="mb-8 flex items-start justify-between gap-4">
-        <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-          <Icon aria-hidden="true" className="size-5" />
-        </div>
-        <ArrowUpRight
-          aria-hidden="true"
-          className="size-5 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
-        />
-      </div>
-      <p className="mb-2 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-        {project.label}
-      </p>
-      <h3 className="font-heading text-2xl font-semibold tracking-tight">
-        {project.title}
-      </h3>
-      <p className="mt-3 text-sm leading-6 text-muted-foreground">
-        {project.description}
-      </p>
-      <span className="mt-auto flex items-center gap-2 pt-8 text-sm font-medium text-foreground">
-        Visit project <ExternalLink aria-hidden="true" className="size-4" />
-      </span>
-    </a>
-  )
+    return (
+        <a
+            className="group flex h-full flex-col rounded-2xl border border-border/70 bg-card/70 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+            href={project.href}
+            rel="noreferrer"
+            target="_blank"
+        >
+            <div className="mb-8 flex items-start justify-between gap-4">
+                <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Icon aria-hidden="true" className="size-5" />
+                </div>
+                <ArrowUpRight
+                    aria-hidden="true"
+                    className="size-5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary"
+                />
+            </div>
+            <p className="mb-2 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+                {project.label}
+            </p>
+            <h3 className="font-heading text-2xl font-semibold tracking-tight">
+                {project.title}
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                {project.description}
+            </p>
+            <span className="mt-auto flex items-center gap-2 pt-8 text-sm font-medium text-foreground">
+                Visit project{" "}
+                <ExternalLink aria-hidden="true" className="size-4" />
+            </span>
+        </a>
+    )
 }
 
 export default function Page() {
@@ -151,7 +152,7 @@ export default function Page() {
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pt-14 pb-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-20 lg:px-8 lg:pt-20 lg:pb-24">
         <div>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-            <span className="size-1.5 rounded-full bg-emerald-500" />
+              <span className="size-1.5 rounded-full bg-emerald-500" />
             Full-stack engineer
           </p>
           <h1 className="font-heading text-5xl leading-[1.02] font-semibold tracking-[-0.05em] sm:text-7xl lg:text-[5.25rem]">
