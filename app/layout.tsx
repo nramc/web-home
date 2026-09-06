@@ -1,22 +1,32 @@
 import { Geist_Mono, Inter, Roboto } from "next/font/google"
+import type { Metadata } from "next"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-export const metadata = {
+export const metadata: Metadata = {
     metadataBase: new URL("https://codewithram.dev"),
     title: {
-        default: "Ram | Senior Software Engineer",
-        template: "%s | Ram",
+        default: "Code With Ram | Curiosity Driven Engineering",
+        template: "%s | Code With Ram",
     },
     description:
-        "Ram is a senior software engineer building thoughtful full-stack products, APIs, and open-source software.",
+        "Curiosity Driven Engineering by Ram: thoughtful full-stack products, APIs, and open-source software.",
     alternates: {
         canonical: "https://codewithram.dev",
     },
+    icons: {
+        icon: [
+            { url: "/favicon.svg", type: "image/svg+xml" },
+            { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+        ],
+        shortcut: "/favicon.ico",
+        apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    },
+    manifest: "/site.webmanifest",
     openGraph: {
-        title: "Ram | Senior Software Engineer",
+        title: "Code With Ram | Curiosity Driven Engineering",
         description:
             "Explore Ram's full-stack products, APIs, and open-source projects.",
         url: "https://codewithram.dev",
@@ -26,7 +36,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary",
-        title: "Ram | Senior Software Engineer",
+        title: "Code With Ram | Curiosity Driven Engineering",
         description:
             "Explore Ram's full-stack products, APIs, and open-source projects.",
     },
