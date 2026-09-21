@@ -23,11 +23,11 @@ export default function ContactPage() {
         <main className="overflow-hidden">
             <SiteHeader />
 
-            <section className="mx-auto max-w-3xl px-6 pt-16 pb-20 lg:px-8 lg:pt-24">
+            <section className="mx-auto max-w-3xl px-6 pt-20 pb-28 lg:px-8 lg:pt-28">
                 <p className="mb-3 text-sm font-semibold tracking-[0.18em] text-primary uppercase">
                     Contact
                 </p>
-                <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">
+                <h1 className="font-heading text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">
                     Let&apos;s build something amazing together.
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
@@ -44,7 +44,7 @@ export default function ContactPage() {
                         const isExternal = social.href.startsWith("http")
                         return (
                             <a
-                                className="group flex items-center gap-4 rounded-2xl border border-border/70 bg-card/70 p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+                                className="glass-panel group flex items-center gap-4 rounded-2xl p-5 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
                                 href={social.href}
                                 key={social.label}
                                 rel={

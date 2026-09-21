@@ -19,8 +19,9 @@ export function NavLink({
         <Link
             aria-current={isActive ? "page" : undefined}
             className={cn(
-                "transition-colors hover:text-foreground",
-                isActive && "font-medium text-foreground"
+                "rounded-full px-3 py-1.5 transition-colors hover:text-foreground",
+                isActive &&
+                    "bg-background font-medium text-foreground shadow-sm"
             )}
             href={href}
         >

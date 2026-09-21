@@ -2,8 +2,8 @@ import { socialLinks } from "@/lib/social"
 
 export function SiteFooter() {
     return (
-        <footer className="border-t border-border/70">
-            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <footer className="border-t border-border/70 bg-muted/20">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
                 <p>
                     <span className="font-medium text-foreground">Ram</span> —
                     building with curiosity and care.

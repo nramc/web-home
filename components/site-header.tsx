@@ -13,7 +13,7 @@ const navItems = [
 
 export function SiteHeader() {
     return (
-        <header className="sticky top-0 z-20 mx-auto flex max-w-6xl items-center justify-between border-b border-border/40 bg-background/75 px-6 py-4 backdrop-blur-xl lg:px-8">
+        <header className="sticky top-0 z-20 mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl border border-border/70 bg-background/70 px-4 py-3 shadow-lg shadow-black/[0.03] backdrop-blur-xl sm:px-6 lg:px-8">
             <div className="flex min-w-0 items-center gap-3">
                 <Link
                     className="flex shrink-0 items-center gap-2.5 font-heading text-lg font-bold tracking-tight"
@@ -21,7 +21,7 @@ export function SiteHeader() {
                 >
                     <Image
                         alt="Code with Ram logo"
-                        className="size-9 rounded-xl object-cover shadow-sm"
+                        className="size-9 rounded-xl object-cover shadow-md shadow-primary/20"
                         height={36}
                         priority
                         src="/CodeWithRam-512x512.png"
@@ -35,7 +35,7 @@ export function SiteHeader() {
             </div>
             <nav
                 aria-label="Primary navigation"
-                className="hidden items-center gap-8 text-sm text-muted-foreground md:flex"
+                className="hidden items-center gap-1 rounded-full border border-border/60 bg-muted/45 p-1 text-sm text-muted-foreground md:flex"
             >
                 {navItems.map((item) => (
                     <NavLink href={item.href} key={item.href}>

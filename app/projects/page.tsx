@@ -25,11 +25,11 @@ export default function ProjectsPage() {
         <main className="overflow-hidden">
             <SiteHeader />
 
-            <section className="mx-auto max-w-6xl px-6 pt-16 pb-12 lg:px-8 lg:pt-24">
+            <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 lg:px-8 lg:pt-28">
                 <p className="mb-3 text-sm font-semibold tracking-[0.18em] text-primary uppercase">
                     Selected work
                 </p>
-                <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">
+                <h1 className="font-heading text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">
                     Things I&apos;ve built
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
@@ -38,13 +38,13 @@ export default function ProjectsPage() {
                 </p>
             </section>
 
-            <section className="border-t border-border/70 py-16">
+            <section className="border-t border-border/70 py-20">
                 <div className="mx-auto max-w-6xl space-y-6 px-6 lg:px-8">
                     {projects.map((project) => {
                         const Icon = project.icon
                         return (
                             <article
-                                className="group rounded-2xl border border-border/70 bg-card/70 p-6 shadow-sm transition-all hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 sm:p-8"
+                                className="glass-panel group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 sm:p-8"
                                 key={project.title}
                             >
                                 <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
