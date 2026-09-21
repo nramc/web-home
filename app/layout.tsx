@@ -2,11 +2,20 @@ import { Geist_Mono, Inter, Roboto } from "next/font/google"
 import type { Metadata } from "next"
 
 import "./globals.css"
+import { StructuredData } from "@/components/structured-data"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://codewithram.dev"),
+    authors: [
+        {
+            name: "Ramachandran Nellaiyappan",
+            url: "https://codewithram.dev/about",
+        },
+    ],
+    creator: "Ramachandran Nellaiyappan",
+    publisher: "Code With Ram",
     title: {
         default: "Code With Ram | Curiosity Driven Engineering",
         template: "%s | Code With Ram",
@@ -33,12 +42,21 @@ export const metadata: Metadata = {
         siteName: "Code with Ram",
         locale: "en_US",
         type: "website",
+        images: [
+            {
+                url: "/opengraph-image",
+                width: 1200,
+                height: 630,
+                alt: "Code With Ram - Curiosity Driven Engineering",
+            },
+        ],
     },
     twitter: {
-        card: "summary",
+        card: "summary_large_image",
         title: "Code With Ram | Curiosity Driven Engineering",
         description:
             "Explore Ram's full-stack products, APIs, and open-source projects.",
+        images: ["/opengraph-image"],
     },
 }
 
@@ -66,6 +84,7 @@ export default function RootLayout({
             )}
         >
             <body>
+                <StructuredData />
                 <ThemeProvider>{children}</ThemeProvider>
             </body>
         </html>
