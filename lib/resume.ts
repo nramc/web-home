@@ -3,7 +3,6 @@ export type ExperienceEntry = {
     company: string
     companyHref: string
     period: string
-    duration: string
     highlights: string[]
 }
 
@@ -13,7 +12,6 @@ export const experience: ExperienceEntry[] = [
         company: "1&1 Mail & Media Development & Technology GmbH",
         companyHref: "https://www.mail-and-media.com/",
         period: "January 2021 – Present",
-        duration: "4+ years",
         highlights: [
             "Leading projects for Germany's top e-mail provider with 43M+ users",
             "Designed and developed applications using Java Spring frameworks and Apache Wicket",
@@ -30,7 +28,6 @@ export const experience: ExperienceEntry[] = [
         company: "Tata Consultancy Services",
         companyHref: "https://www.tcs.com/",
         period: "January 2013 – December 2020",
-        duration: "8 years",
         highlights: [
             "Developed enterprise-grade Java applications for international clients",
             "Developed RESTful web services to integrate with internal and external third-party systems",
@@ -231,4 +228,4 @@ export const languages = [
 export const resumePdfHref = "/resume/Ramachandran-Nellaiyappan-Resume.pdf"
 
 export const resumeSummary =
-    "Experienced Java developer with 12+ years of expertise building scalable web applications using Java, Spring, Angular, and databases like PostgreSQL and Oracle. Skilled in agile methodologies and passionate about enhancing code quality, driving productivity through automation, and leading initiatives to improve development processes."
+    "Senior software engineer with 12+ years of experience building scalable web applications and backend systems using Java, Spring, Angular, PostgreSQL, and Oracle. Passionate about secure modernisation, developer productivity, automation, and leading initiatives that improve how teams deliver software."

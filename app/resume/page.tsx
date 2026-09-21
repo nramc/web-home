@@ -83,7 +83,7 @@ export default function ResumePage() {
                             >
                                 <span className="absolute top-8 -left-[2.28rem] size-3 rounded-full border-2 border-background bg-primary shadow-[0_0_0_5px_color-mix(in_oklch,var(--primary)_15%,transparent)]" />
                                 <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-                                    {entry.period} · {entry.duration}
+                                    {entry.period}
                                 </p>
                                 <h3 className="mt-1 font-heading text-xl font-semibold tracking-tight">
                                     {entry.role}

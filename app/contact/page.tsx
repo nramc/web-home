@@ -37,6 +37,11 @@ export default function ContactPage() {
                     open-source projects. Feel free to reach out through any of
                     the channels below.
                 </p>
+                <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-5 text-sm leading-6 text-foreground">
+                    Open to thoughtful conversations about backend systems,
+                    developer productivity, platform modernisation, and
+                    open-source collaboration.
+                </div>
 
                 <div className="mt-10 grid gap-4 sm:grid-cols-2">
                     {socialLinks.map((social) => {

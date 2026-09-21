@@ -128,7 +128,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                         <h3 className="font-heading text-xl font-semibold tracking-tight">
-                            Outside of work
+                            Beyond the code
                         </h3>
                         <ul className="mt-4 space-y-2 text-sm leading-6 text-muted-foreground">
                             {hobbies.map((hobby) => (

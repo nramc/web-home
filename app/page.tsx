@@ -4,7 +4,7 @@ import Link from "next/link"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
-import { projects, type ProjectDetail } from "@/lib/projects"
+import { type ProjectDetail, projects } from "@/lib/projects"
 
 const capabilities = [
     "Full-stack product development",
@@ -69,9 +69,8 @@ export default function Page() {
                         <span className="text-gradient">with purpose.</span>
                     </h1>
                     <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                        I&apos;m Ram, a senior software engineer creating
-                        reliable products, APIs, and open-source tools from idea
-                        to launch.
+                        I&apos;m Ram, a senior software engineer turning complex
+                        systems into dependable software.
                     </p>
                     <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                         <Button
@@ -249,6 +248,26 @@ export default function Page() {
                             </Link>
                         </Button>
                     </div>
+                </div>
+            </section>
+
+            <section className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+                <div className="glass-panel flex flex-col justify-between gap-8 rounded-3xl p-8 sm:p-10 lg:flex-row lg:items-center">
+                    <div className="max-w-2xl">
+                        <p className="mb-3 text-sm font-semibold tracking-[0.18em] text-primary uppercase">
+                            Currently exploring
+                        </p>
+                        <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+                            AI-assisted developer productivity and better ways
+                            to share technical knowledge.
+                        </h2>
+                    </div>
+                    <Button asChild className="shrink-0 rounded-full" size="lg">
+                        <Link href="/contact">
+                            Start a conversation{" "}
+                            <ArrowUpRight aria-hidden="true" />
+                        </Link>
+                    </Button>
                 </div>
             </section>
 

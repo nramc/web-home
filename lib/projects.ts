@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react"
 import { BookOpen, GitBranch, Layers3, Map, Sparkles } from "lucide-react"
 
 export type ProjectStatus = "Live" | "Open Source" | "Proof of Concept"
+export type ProjectCategory = "Products" | "Open source" | "Knowledge"
 
 export type ProjectDetail = {
     title: string
@@ -10,6 +11,7 @@ export type ProjectDetail = {
     href: string
     label: string
     status: ProjectStatus
+    category: ProjectCategory
     stack: string[]
     icon: LucideIcon
     logo?: string
@@ -26,6 +28,7 @@ export const projects: ProjectDetail[] = [
         href: "https://blog.codewithram.dev/",
         label: "Writing",
         status: "Live",
+        category: "Knowledge",
         stack: ["MkDocs"],
         icon: BookOpen,
         links: [{ label: "Visit blog", href: "https://blog.codewithram.dev/" }],
@@ -39,6 +42,7 @@ export const projects: ProjectDetail[] = [
         href: "https://kural.codewithram.dev/",
         label: "Web app + API",
         status: "Live",
+        category: "Products",
         stack: ["Java", "REST API", "Vercel"],
         icon: Layers3,
         logo: "/projects/thirukkural-api-logo.png",
@@ -59,6 +63,7 @@ export const projects: ProjectDetail[] = [
         href: "https://journey.codewithram.dev/home",
         label: "Product + API",
         status: "Live",
+        category: "Products",
         stack: ["Spring Boot", "Angular", "MongoDB Atlas", "OpenStreetMap"],
         icon: Map,
         logo: "/projects/journey-logo.png",
@@ -80,6 +85,7 @@ export const projects: ProjectDetail[] = [
         href: "https://github.com/nramc/geojson4j",
         label: "Open source",
         status: "Open Source",
+        category: "Open source",
         stack: ["Java", "Maven Central"],
         icon: GitBranch,
         logo: "/projects/geojson4j-logo.png",
@@ -100,6 +106,7 @@ export const projects: ProjectDetail[] = [
         href: "https://github.com/nramc/video-generator",
         label: "Proof of concept",
         status: "Proof of Concept",
+        category: "Open source",
         stack: ["Java"],
         icon: Sparkles,
         links: [
