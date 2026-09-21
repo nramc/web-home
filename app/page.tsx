@@ -1,79 +1,10 @@
-import {
-    ArrowUpRight,
-    BookOpen,
-    Code2,
-    ExternalLink,
-    GitBranch,
-    Globe2,
-    Layers3,
-    Map,
-    Sparkles,
-} from "lucide-react"
-import type { LucideIcon } from "lucide-react"
-import Image from "next/image"
+import { ArrowUpRight, Code2, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
-import { ThemeToggle } from "@/components/theme-toggle"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
-
-type Project = {
-    title: string
-    description: string
-    href: string
-    label: string
-    icon: LucideIcon
-}
-
-const projects: Project[] = [
-    {
-        title: "Portfolio",
-        description:
-            "A personal profile and experience site with a closer look at my background and work.",
-        href: "https://myprofile.codewithram.dev/",
-        label: "Personal site",
-        icon: Globe2,
-    },
-    {
-        title: "Blog",
-        description:
-            "Technical writing, lessons learned, and practical notes from building software.",
-        href: "https://blog.codewithram.dev/",
-        label: "Writing",
-        icon: BookOpen,
-    },
-    {
-        title: "Thirukkural",
-        description:
-            "A favorite Tamil Thirukkural experience backed by a REST API for exploring timeless wisdom.",
-        href: "https://kural.codewithram.dev/",
-        label: "Web app + API",
-        icon: Layers3,
-    },
-    {
-        title: "Journey",
-        description:
-            "A journey application bringing together a dedicated frontend and REST API backend.",
-        href: "https://journey.codewithram.dev/home",
-        label: "Product + API",
-        icon: Map,
-    },
-    {
-        title: "geojson4j",
-        description:
-            "An open-source Java library for working with GeoJSON data and geospatial workflows.",
-        href: "https://github.com/nramc/geojson4j",
-        label: "Open source",
-        icon: GitBranch,
-    },
-    {
-        title: "Video Generator",
-        description:
-            "A proof-of-concept project exploring programmatic video generation and creative tooling.",
-        href: "https://github.com/nramc/video-generator",
-        label: "Proof of concept",
-        icon: Sparkles,
-    },
-]
+import { projects, type ProjectDetail } from "@/lib/projects"
 
 const capabilities = [
     "Full-stack product development",
@@ -82,7 +13,7 @@ const capabilities = [
     "Java and open-source libraries",
 ]
 
-function ProjectCard({ project }: Readonly<{ project: Project }>) {
+function ProjectCard({ project }: Readonly<{ project: ProjectDetail }>) {
     const Icon = project.icon
 
     return (
@@ -123,45 +54,7 @@ export default function Page() {
         <main className="overflow-hidden">
             <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_top,oklch(0.62_0.2_264/0.16),transparent_58%)] dark:bg-[radial-gradient(circle_at_top,oklch(0.5_0.2_264/0.2),transparent_58%)]" />
 
-            <header className="sticky top-0 z-20 mx-auto flex max-w-6xl items-center justify-between border-b border-border/40 bg-background/75 px-6 py-4 backdrop-blur-xl lg:px-8">
-                <div className="flex min-w-0 items-center gap-3">
-                    <Link
-                        className="flex shrink-0 items-center gap-2.5 font-heading text-lg font-bold tracking-tight"
-                        href="/"
-                    >
-                        <Image
-                            alt="Code with Ram logo"
-                            className="size-9 rounded-xl object-cover shadow-sm"
-                            height={36}
-                            priority
-                            src="/CodeWithRam-512x512.png"
-                            width={36}
-                        />
-                        Code<span className="text-primary">With</span>Ram
-                    </Link>
-                    <span className="hidden border-l border-border/80 pl-3 text-[0.68rem] font-medium tracking-[0.16em] text-muted-foreground uppercase sm:inline-flex">
-                        Curiosity Driven Engineering
-                    </span>
-                </div>
-                <nav
-                    aria-label="Primary navigation"
-                    className="hidden items-center gap-8 text-sm text-muted-foreground md:flex"
-                >
-                    <Link
-                        className="transition-colors hover:text-foreground"
-                        href="#work"
-                    >
-                        Work
-                    </Link>
-                    <Link
-                        className="transition-colors hover:text-foreground"
-                        href="#about"
-                    >
-                        About
-                    </Link>
-                </nav>
-                <ThemeToggle />
-            </header>
+            <SiteHeader />
 
             <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pt-14 pb-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-20 lg:px-8 lg:pt-20 lg:pb-24">
                 <div>
@@ -196,14 +89,10 @@ export default function Page() {
                             size="lg"
                             variant="outline"
                         >
-                            <a
-                                href="https://myprofile.codewithram.dev/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
+                            <Link href="/about">
                                 More about me{" "}
-                                <ExternalLink aria-hidden="true" />
-                            </a>
+                                <ArrowUpRight aria-hidden="true" />
+                            </Link>
                         </Button>
                     </div>
                 </div>
@@ -338,26 +227,31 @@ export default function Page() {
                             </div>
                         ))}
                     </div>
+                    <div className="flex flex-wrap gap-3 pt-5">
+                        <Button
+                            asChild
+                            className="rounded-full"
+                            variant="outline"
+                        >
+                            <Link href="/resume">
+                                View full résumé{" "}
+                                <ArrowUpRight aria-hidden="true" />
+                            </Link>
+                        </Button>
+                        <Button
+                            asChild
+                            className="rounded-full"
+                            variant="ghost"
+                        >
+                            <Link href="/projects">
+                                All projects <ArrowUpRight aria-hidden="true" />
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </section>
 
-            <footer className="border-t border-border/70">
-                <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
-                    <p>
-                        <span className="font-medium text-foreground">Ram</span>{" "}
-                        — building with curiosity and care.
-                    </p>
-                    <div className="flex flex-col gap-1 sm:items-end">
-                        <p className="font-mono text-xs text-muted-foreground/70">
-                            codewithram.dev
-                        </p>
-                        <p className="text-xs text-muted-foreground/70">
-                            © {new Date().getFullYear()} Ram. All rights
-                            reserved.
-                        </p>
-                    </div>
-                </div>
-            </footer>
+            <SiteFooter />
         </main>
     )
 }

@@ -15,7 +15,10 @@
 
 The source for [codewithram.dev](https://codewithram.dev), a personal home
 page for Ram's full-stack engineering work, products, APIs, and open-source
-projects.
+projects. The site includes a landing page plus dedicated `/about`,
+`/resume`, `/projects`, and `/contact` routes — this consolidates what used
+to be a separate MkDocs-based portfolio (formerly
+`myprofile.codewithram.dev`) into a single Next.js codebase.
 
 ## Tech stack
 
@@ -62,10 +65,30 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project structure
 
-- `app/` - Next.js routes, layout, page, and global styles
-- `components/` - Reusable UI and theme components
-- `public/` - Static assets and site icons
-- `lib/` - Shared utilities
+- `app/` - Next.js routes (`/`, `/about`, `/resume`, `/projects`, `/contact`),
+  layout, and global styles
+- `components/` - Reusable UI, layout (`site-header`, `site-footer`), and
+  theme components
+- `public/` - Static assets, site icons, résumé PDF, certificates, and project
+  logos
+- `lib/` - Shared utilities and content data modules (`projects.ts`,
+  `resume.ts`, `about.ts`, `social.ts`) — update these files to change
+  portfolio content instead of editing page markup directly
+
+## Editing content
+
+Portfolio content lives as typed data in `lib/`, not as page markup or
+Markdown:
+
+- `lib/projects.ts` - project cards shown on the landing page and `/projects`
+- `lib/resume.ts` - experience, skills, education, certifications, and awards
+  shown on `/resume`
+- `lib/about.ts` - capabilities, highlights, passions, hobbies, and
+  inspirations shown on `/about`
+- `lib/social.ts` - social/contact links shown in the footer and on `/contact`
+
+Update the relevant data file and the corresponding page will pick up the
+change automatically.
 
 ## License
 
