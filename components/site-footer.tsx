@@ -1,5 +1,3 @@
-import { socialLinks } from "@/lib/social"
-
 export function SiteFooter() {
     return (
         <footer className="border-t border-border/70 bg-muted/20">
@@ -8,28 +6,7 @@ export function SiteFooter() {
                     <span className="font-medium text-foreground">Ram</span> —
                     building with curiosity and care.
                 </p>
-                <div className="flex items-center gap-4">
-                    {socialLinks
-                        .filter((social) => social.label !== "Location")
-                        .map((social) => {
-                            const Icon = social.icon
-                            return (
-                                <a
-                                    aria-label={social.label}
-                                    className="text-muted-foreground transition-colors hover:text-primary"
-                                    href={social.href}
-                                    key={social.label}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Icon
-                                        aria-hidden="true"
-                                        className="size-4"
-                                    />
-                                </a>
-                            )
-                        })}
-                </div>
+
                 <div className="flex flex-col gap-1 sm:items-end">
                     <p className="font-mono text-xs text-muted-foreground/70">
                         codewithram.dev

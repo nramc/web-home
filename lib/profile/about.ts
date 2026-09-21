@@ -8,7 +8,7 @@ import {
     Sparkles,
 } from "lucide-react"
 
-import { getExperienceLabel } from "@/lib/career"
+import { getExperienceLabel } from "@/lib/profile/career"
 
 export type Capability = {
     title: string

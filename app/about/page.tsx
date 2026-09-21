@@ -10,8 +10,8 @@ import {
     hobbies,
     inspirations,
     passions,
-} from "@/lib/about"
-import { getExperienceLabel } from "@/lib/career"
+} from "@/lib/profile/about"
+import { getExperienceLabel } from "@/lib/profile/career"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"

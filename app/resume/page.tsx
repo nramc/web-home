@@ -13,8 +13,8 @@ import {
     skillGroups,
     softSkills,
     toolGroups,
-} from "@/lib/resume"
-import { getExperienceLabel } from "@/lib/career"
+} from "@/lib/profile/resume"
+import { getExperienceLabel } from "@/lib/profile/career"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"

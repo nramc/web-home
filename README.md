@@ -80,12 +80,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 Portfolio content lives as typed data in `lib/`, not as page markup or
 Markdown:
 
-- `lib/projects.ts` - project cards shown on the landing page and `/projects`
-- `lib/resume.ts` - experience, skills, education, certifications, and awards
+- `lib/profile/projects.ts` - project cards shown on the landing page and `/projects`
+- `lib/profile/resume.ts` - experience, skills, education, certifications, and awards
   shown on `/resume`
-- `lib/about.ts` - capabilities, highlights, passions, hobbies, and
+- `lib/profile/about.ts` - capabilities, highlights, passions, hobbies, and
   inspirations shown on `/about`
-- `lib/social.ts` - social/contact links shown in the footer and on `/contact`
+- `lib/profile/social.ts` - social/contact links shown in the footer and on `/contact`
 
 Update the relevant data file and the corresponding page will pick up the
 change automatically.

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
-import { type ProjectDetail, projects } from "@/lib/projects"
+import { type ProjectDetail, projects } from "@/lib/profile/projects"
 
 const capabilities = [
     "Full-stack product development",

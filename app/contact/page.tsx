@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { socialLinks } from "@/lib/social"
+import { socialLinks } from "@/lib/profile/social"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 

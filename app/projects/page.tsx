@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 
-import { projects } from "@/lib/projects"
+import { projects } from "@/lib/profile/projects"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 

@@ -1,4 +1,4 @@
-import { getExperienceLabel } from "@/lib/career"
+import { getExperienceLabel } from "@/lib/profile/career"
 
 export type ExperienceEntry = {
     role: string
