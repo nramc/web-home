@@ -14,6 +14,13 @@ This is the Next.js 16 App Router source for
 - `components/` - reusable UI and theme components
 - `public/` - static assets, logos, and icons
 - `lib/` - shared utilities, when present
+- `hooks/` - shared React hooks, when present (currently empty)
+- `.agents/skills/` - installed agent skills (e.g. Next.js App Router patterns,
+  Vercel Functions runtime, React/Next.js performance) tracked by
+  `skills-lock.json`; read the relevant `SKILL.md` before acting on a matching
+  task
+- `renovate.json` - automated dependency update policy: patch/minor updates
+  automerge, major updates require manual review
 - `.github/copilot-instructions.md` - additional project context
 - `README.md` - setup, scripts, structure, and user-facing project documentation
 
@@ -36,7 +43,10 @@ layers, or environment-variable integrations in the application source.
 4. For Next.js-specific work, read the applicable documentation under
    `node_modules/next/dist/docs/`; this project may use APIs that differ from
    older Next.js versions.
-5. Keep the change focused. Do not modify generated output in `.next/`.
+5. If the task matches an installed skill under `.agents/skills/` (App Router
+   patterns, Vercel Functions/Edge runtime, or React/Next.js performance),
+   read that skill's `SKILL.md` before making the change.
+6. Keep the change focused. Do not modify generated output in `.next/`.
 
 ## Implementation conventions
 
