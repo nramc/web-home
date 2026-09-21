@@ -112,7 +112,6 @@ export default function Page() {
                             </span>
                         </div>
                         <div className="relative font-mono text-sm leading-7">
-                            <p className="text-slate-500">01</p>
                             <p>
                                 <span className="text-fuchsia-300">const</span>{" "}
                                 <span className="text-sky-300">ram</span> ={" "}
@@ -155,7 +154,7 @@ export default function Page() {
                             Currently exploring
                         </p>
                         <p className="mt-1 flex items-center gap-2 text-sm font-medium">
-                            <Code2 className="size-4 text-primary" /> APIs &amp;
+                            <Code2 className="size-4 text-primary" /> AI &amp;
                             open source
                         </p>
                     </div>
