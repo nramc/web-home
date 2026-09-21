@@ -7,32 +7,33 @@ import {
     certifications,
     education,
     experience,
+    getResumeSummary,
     languages,
     resumePdfHref,
-    resumeSummary,
     skillGroups,
     softSkills,
     toolGroups,
 } from "@/lib/resume"
+import { getExperienceLabel } from "@/lib/career"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "Résumé",
-    description:
-        "12+ years of experience building scalable Java, Spring Boot, and Angular applications — professional experience, skills, education, and certifications.",
+    description: `${getExperienceLabel()} years of experience building scalable Java, Spring Boot, and Angular applications — professional experience, skills, education, and certifications.`,
     alternates: { canonical: "https://codewithram.dev/resume" },
     openGraph: {
         title: "Résumé | Code With Ram",
-        description:
-            "12+ years of experience building scalable Java, Spring Boot, and Angular applications.",
+        description: `${getExperienceLabel()} years of experience building scalable Java, Spring Boot, and Angular applications.`,
         url: "https://codewithram.dev/resume",
         type: "profile",
     },
 }
 
 export default function ResumePage() {
+    const resumeSummary = getResumeSummary()
+
     return (
         <main className="overflow-hidden">
             <div className="print:hidden">

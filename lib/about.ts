@@ -8,6 +8,8 @@ import {
     Sparkles,
 } from "lucide-react"
 
+import { getExperienceLabel } from "@/lib/career"
+
 export type Capability = {
     title: string
     description: string
@@ -101,8 +103,12 @@ export const inspirations: Inspiration[] = [
     },
 ]
 
-export const aboutIntro = [
-    "I'm Ramachandran Nellaiyappan, a passionate and results-driven senior software engineer with 12+ years of experience in Java and full-stack development. I specialize in building dependable products, APIs, and modern web applications.",
-    "I specialize in Java, Spring Boot, Angular, CI/CD automation, microservices, and security best practices. I care deeply about developer productivity, automation, and open-source contributions.",
-    "My goal is to continue evolving as a developer while embracing cutting-edge technologies like AI, automation, and cloud computing — integrating AI-driven automation, security enhancements, and intelligent decision-making into modern applications.",
-]
+export function getAboutIntro() {
+    const experienceLabel = getExperienceLabel()
+
+    return [
+        `I'm Ramachandran Nellaiyappan, a passionate and results-driven senior software engineer with ${experienceLabel} years of experience in Java and full-stack development. I specialize in building dependable products, APIs, and modern web applications.`,
+        "I specialize in Java, Spring Boot, Angular, CI/CD automation, microservices, and security best practices. I care deeply about developer productivity, automation, and open-source contributions.",
+        "My goal is to continue evolving as a developer while embracing cutting-edge technologies like AI, automation, and cloud computing — integrating AI-driven automation, security enhancements, and intelligent decision-making into modern applications.",
+    ]
+}

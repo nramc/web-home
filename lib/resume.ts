@@ -1,3 +1,5 @@
+import { getExperienceLabel } from "@/lib/career"
+
 export type ExperienceEntry = {
     role: string
     company: string
@@ -227,5 +229,6 @@ export const languages = [
 
 export const resumePdfHref = "/resume/Ramachandran-Nellaiyappan-Resume.pdf"
 
-export const resumeSummary =
-    "Senior software engineer with 12+ years of experience building scalable web applications and backend systems using Java, Spring, Angular, PostgreSQL, and Oracle. Passionate about secure modernisation, developer productivity, automation, and leading initiatives that improve how teams deliver software."
+export function getResumeSummary() {
+    return `Senior software engineer with ${getExperienceLabel()} years of experience building scalable web applications and backend systems using Java, Spring, Angular, PostgreSQL, and Oracle. Passionate about secure modernisation, developer productivity, automation, and leading initiatives that improve how teams deliver software.`
+}

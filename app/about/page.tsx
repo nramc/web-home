@@ -4,21 +4,21 @@ import Image from "next/image"
 import Link from "next/link"
 
 import {
-    aboutIntro,
     capabilities,
+    getAboutIntro,
     highlights,
     hobbies,
     inspirations,
     passions,
 } from "@/lib/about"
+import { getExperienceLabel } from "@/lib/career"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: "About",
-    description:
-        "Senior software engineer specializing in Java, Spring Boot, Angular, and automation — background, capabilities, and interests.",
+    description: `Senior software engineer with ${getExperienceLabel()} years of experience specializing in Java, Spring Boot, Angular, and automation — background, capabilities, and interests.`,
     alternates: { canonical: "https://codewithram.dev/about" },
     openGraph: {
         title: "About | Code With Ram",
@@ -30,6 +30,8 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+    const aboutIntro = getAboutIntro()
+
     return (
         <main className="overflow-hidden">
             <SiteHeader />
